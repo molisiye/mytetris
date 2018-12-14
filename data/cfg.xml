@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game>
+    <frame title="Java俄罗斯方块" windowUp="32" width="1162" height="676"
+           padding="16" border="7" sizeRol="5" loseIdx="7">
+        <button w="105" h="40">
+            <start x="840" y="74"/>
+            <config x="965" y="74"/>
+        </button>
+        <layer class="ui.LayerBackground" x="0" y="0" w="0" h="0"/>
+        <layer class="ui.LayerDataBase" x="40" y="32" w="334" h="279"/>
+        <layer class="ui.LayerDisk" x="40" y="343" w="334" h="279"/>
+        <layer class="ui.LayerGame" x="414" y="32" w="334" h="590"/>
+        <layer class="ui.LayerButton" x="788" y="32" w="334" h="124"/>
+        <layer class="ui.LayerNext" x="788" y="188" w="176" h="116"/>
+        <layer class="ui.LayerLevel" x="964" y="188" w="158" h="116"/>
+        <layer class="ui.LayerPoint" x="788" y="336" w="334" h="160"/>
+        <layer class="ui.LayerAbout" x="788" y="528" w="334" h="94"/>
+    </frame>
+
+    <system maxX="9" maxY="17" minX="0" minY="0" levelUp="20">
+        <rect round="true">
+            <point x="4" y="0"/>
+            <point x="3" y="0"/>
+            <point x="5" y="0"/>
+            <point x="6" y="0"/>
+        </rect>
+        <rect round="true">
+            <point x="4" y="0"/>
+            <point x="3" y="0"/>
+            <point x="5" y="0"/>
+            <point x="4" y="1"/>
+        </rect>
+        <rect round="true">
+            <point x="4" y="0"/>
+            <point x="3" y="0"/>
+            <point x="5" y="0"/>
+            <point x="3" y="1"/>
+        </rect>
+        <rect round="true">
+            <point x="4" y="0"/>
+            <point x="5" y="0"/>
+            <point x="3" y="1"/>
+            <point x="4" y="1"/>
+        </rect>
+        <rect round="false">
+            <point x="4" y="0"/>
+            <point x="5" y="0"/>
+            <point x="4" y="1"/>
+            <point x="5" y="1"/>
+        </rect>
+        <rect round="true">
+            <point x="4" y="0"/>
+            <point x="3" y="0"/>
+            <point x="5" y="0"/>
+            <point x="5" y="1"/>
+        </rect>
+        <rect round="true">
+            <point x="4" y="0"/>
+            <point x="3" y="0"/>
+            <point x="4" y="1"/>
+            <point x="5" y="1"/>
+        </rect>
+        <plusPoint rm="1" point="10"/>
+        <plusPoint rm="2" point="30"/>
+        <plusPoint rm="3" point="50"/>
+        <plusPoint rm="4" point="70"/>
+    </system>
+
+    <data maxRow="5">
+        <dataA className="dao.DataBase">
+            <param key="driver" value="com.mysql.jdbc.Driver"/>
+            <param key="dbUri" value="jdbc:mysql:///mytetris"/>
+            <param key="dbUser" value="root"/>
+            <param key="dbPwd" value="1234"/>
+        </dataA>
+        <dataB className="dao.DataDisk">
+            <param key="path" value="data/record.dat"/>
+        </dataB>
+    </data>
+</game>
